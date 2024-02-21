@@ -8,7 +8,6 @@
 </head>
 <body>
     <header>
-
         <div>
             <img class="profile-image" src="images/profile.jpg" alt="Profile Image">
             <h1 class="name">Levy Bwalya Mulenga</h1>
@@ -23,7 +22,6 @@
                 </ul>
             </nav>
         </div>
-        
     </header>
     <main>
         <form action="sendmail.php" method="post">
@@ -38,6 +36,18 @@
 
             <label for="phone">Phone:</label>
             <input type="tel" id="phone" name="phone" required>
+
+            <label for="projectType">What type of project do you need?</label>
+            <select id="projectType" name="projectType">
+                <option value="Web Development">Web Development</option>
+                <option value="Mobile App Development">Mobile App Development</option>
+                <option value="Software Development">Software Development</option>
+                <option value="Database Development">Database Development</option>
+                <option value="Network Development">Network Development</option>
+                <option value="System Development">System Development</option>
+                <option value="Other">Other (State in Description)</option>
+            </select>
+
 
             <fieldset>
                 <legend>What is your budget range?</legend>
@@ -60,6 +70,17 @@
 
             <label for="description">Describe the project below</label>
             <textarea id="description" name="description" rows="4" required></textarea>
+
+            <div class="file">
+                <label for="file">Upload a file:</label>
+                <input type="file" id="file" name="file">
+            </div>
+
+            <label for="contactTime">When is the best time to contact you?</label>
+            <input type="time" id="contactTime" name="contactTime" required>
+
+            <p>By submitting this form, be assured that your personal information will not be shared 
+            with anyone for any reason. It will only be used to contact you regarding your project.</p>
 
             <input type="submit" value="Submit">
         </form>

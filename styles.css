@@ -198,6 +198,16 @@ body {
     legend {
         padding: 0 5px;
     }
+    .file {
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+    }
+    time {
+        color: #beb4b4;
+        
+    }
 }
 
 @media (max-width: 767px) {
