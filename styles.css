@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, poppins, sans-serif;
+    line-height: 1.6;
+    color: #707070;
+    margin: 0;
+    padding: 0;
+    background: #151b2b;
+}
+
+header {
+    background: #001;
+    color: #beb4b4;
+    padding: 10px 0;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+    
+}
+
+nav ul li a {
+    color: #beb4b4;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+section {
+    padding: 20px 0;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.profile-image {
+    margin-top: 10px;
+    border-radius: 50%;
+    /* This makes the image circular */
+    width: 100px;
+    /* Set the width of the image */
+    height: 100px;
+    /* Set the height of the image */
+    object-fit: cover;
+    /* This ensures the image covers the area without stretching */
+    margin-right: 20px;
+    /* Add some space between the image and the name */
+    float: right;
+}
+
+.name {
+    margin-left: 50px;
+    font-weight: bold;
+    /* Make the name bold */
+}
+
+.name:hover {
+    color: #fff;
+}
+
+.desc {
+    margin: auto;
+    max-width: 55vw;
+    font-weight: bold;
+    /* Make the name bold */
+}
+
+#about {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+    /* Justify the text */
+    padding: 20px;
+    max-width: 70vw;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#skills {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+    /* Justify the text */
+}
+
+#contact {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+    /* Justify the text */
+}
+
+#projects {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+    /* Justify the text */
+}
+
+#experience {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+    /* Justify the text */+
+    border-radius: 5px;
+    padding: 20px;
+    max-width: 70vw;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
