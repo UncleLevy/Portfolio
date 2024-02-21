@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Levy Bwalya Mulenga - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+
+        <div>
+            <img class="profile-image" src="images/profile.jpg" alt="Profile Image">
+            <h1 class="name">Levy Bwalya Mulenga</h1>
+            <!--h2 class="desc">Computer Programmer | Network Technician | System Analyst</h2-->
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+    </header>
+    <main>
+        <form action="sendmail.php" method="post">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
+
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <fieldset>
+                <legend>What is your budget range?</legend>
+                <input type="radio" id="lowBudget" name="budget" value="$50 - $500">
+                <label for="lowBudget">$50 - $500</label><br>
+                <input type="radio" id="mediumBudget" name="budget" value="$1,000 - $5,000">
+                <label for="mediumBudget">$1,000 - $5,000</label><br>
+                <input type="radio" id="highBudget" name="budget" value="Above $5,000">
+                <label for="highBudget">Above $5,000</label>
+            </fieldset>
+
+            <label for="projectTimeline">How long do you need the project?</label>
+            <select id="projectTimeline" name="projectTimeline">
+                <option value="1">1 Month</option>
+                <option value="2">2 Months</option>
+                <option value="3">3 Months</option>
+                <option value="4">4 Months</option>
+                <option value="5">5 Months</option>
+            </select>
+
+            <label for="description">Describe the project below</label>
+            <textarea id="description" name="description" rows="4" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+
+    </main>
