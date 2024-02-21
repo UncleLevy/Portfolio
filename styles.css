@@ -73,6 +73,7 @@ h1 {
     width: 200px;;
     border-radius: 200px;
     margin: auto;
+    object-fit:cover
 }
 
 
