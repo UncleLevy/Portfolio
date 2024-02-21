@@ -105,6 +105,10 @@ section h2{
 section b{
     color: white;
 }
+
+section li{
+    margin-bottom: 20px;
+}
 footer{
     background-color: #151b2b;
     color: #beb4b4;
@@ -118,4 +122,19 @@ footer{
 a{
     color: #beb4b4;
     text-decoration: none;
+}
+
+
+.bar{
+    width: 200px;
+    height: 5px;
+    border-radius: 5px;
+    display: block;
+    background-color: #1c2541;
+}
+
+.bar div{
+    height: 100%;
+    border-radius: 5px;
+    background-color: rgb(85, 125, 245);
 }
