@@ -7,6 +7,38 @@ body {
     padding: 0;
     background: #151b2b;
 }
+
+.menu-toggle {
+    display: none;
+    /* Hide the button on desktop */
+    background-color: #151b2b;
+    color: #beb4b4;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.nav-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: inherit;
+    width: 100%;
+}
+
+.nav-links.show {
+    display: block;
+}
+
+
+
+
+
+
+
+
 @media (min-width:  768px){
     header {
         color: #beb4b4;
@@ -202,7 +234,7 @@ body {
         background-color: #4CAF50;
         color: rgb(194, 190, 190);
         border: none;
-        border-radius: 3px;
+        border-radius: 5px;
         cursor: pointer;
     }
 
@@ -246,6 +278,16 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
 @media (min-width:  1440px){
     section {
         width: 100%;
@@ -263,13 +305,30 @@ body {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 767px) {
-    .chat-button {
-        display: none;
-    }
+    
     header {
+        color: #fff;
         height: 100vh;
-        max-height: 500px;
+        max-height: 400px;
         text-align: center;
         display: grid;
         justify-content: center;
@@ -292,6 +351,7 @@ body {
     nav ul {
         padding: 0;
         list-style: none;
+        display: flex;
         justify-content: center;
     }
     nav ul li {
@@ -319,8 +379,9 @@ body {
         height: 200px ;
         width: 200px;;
         border-radius: 200px;
+        border: orange 1px solid;
         margin: auto;
-        object-fit:cover
+        object-fit:cover;
     }
     .desc {
         margin: auto;
@@ -379,6 +440,7 @@ body {
     }
     .chat-button {
         position: fixed;
+        
         bottom: 20px;
         right: 20px;
         padding: 5px 10px;
@@ -389,6 +451,10 @@ body {
         font-size: 1.5em;
         cursor: pointer;
         box-shadow: #02164e 5px 2px 5px;
+    }
+    .chat-button:hover {
+        background-color: #02164e;
+        box-shadow: royalblue 15px 2px 5px;
     }
     .hidden {
         opacity: 0;
@@ -401,6 +467,74 @@ body {
         opacity: 1;
         filter: blur(0);
         transform: translateX(0);
+    }
+
+    form {
+        align-items: center;
+        justify-content: center;
+        max-width: 90%;
+        margin: auto;
+        /* Make the form take the full width on mobile */
+        padding: 20px;
+        /* Add some padding for mobile */
+        box-sizing: border-box;
+        /* Include padding and border in the element's total width and height */
+    }
+    
+    form label {
+        display: block;
+        /* Stack labels on top of inputs on mobile */
+        margin-bottom: 5px;
+        /* Add some space between labels and inputs */
+    }
+    
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="tel"],
+    form textarea,
+    form select {
+        width: 100%;
+        /* Make inputs take the full width of the form on mobile */
+        box-sizing: border-box;
+        /* Include padding and border in the element's total width and height */
+    }
+    
+    form fieldset {
+        border: none;
+        /* Remove the border on mobile */
+    }
+    
+    form fieldset legend {
+        display: block;
+        /* Stack the legend on top of the radio buttons on mobile */
+        margin-bottom: 5px;
+        /* Add some space between the legend and the radio buttons */
+    }
+    
+    form fieldset input[type="radio"] {
+        display: block;
+        /* Stack radio buttons on top of each other on mobile */
+        margin-bottom: 5px;
+        /* Add some space between radio buttons */
+    }
+    
+    form fieldset label {
+        display: block;
+        /* Stack labels on top of radio buttons on mobile */
+        margin-bottom: 5px;
+        /* Add some space between labels and radio buttons */
+    }
+    
+    form input[type="submit"] {
+        width: 100%;
+        /* Make the submit button take the full width of the form on mobile */
+        margin-top: 10px;
+        /* Add some space above the submit button */
+    }
+    
+    .menu-toggle {
+        display: block;
+        /* Show the button on mobile */
     }
 }
 
