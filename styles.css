@@ -211,6 +211,7 @@ body {
         flex-direction: column;
         max-width: 400px;
         margin: 0 auto;
+        margin-bottom: 15px;
         padding: 20px;
         background-color: inherit;
         border-radius: 1px;
@@ -238,10 +239,6 @@ body {
         border: none;
         border-radius: 5px;
         cursor: pointer;
-    }
-
-    input[type="submit"]:hover {
-        background-color: royalblue;
     }
 
     fieldset {
