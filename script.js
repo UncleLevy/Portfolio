@@ -1,19 +1,40 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
 
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth'
-        });
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        console.log(entry)
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }else{
+            entry.target.classList.remove('show');
+        }
     });
 });
-<form id="feedback-form">
-    <input type="text" id="name" placeholder="Your Name" required>
-        <textarea id="message" placeholder="Your Feedback" required></textarea>
-        <button type="submit">Submit</button>
-</form>
-document.getElementById('feedback-form').addEventListener('submit', function (e) {
-    e.preventDefault();
-    // Add your form submission logic here
-    alert('Form submitted!');
+
+const hiddenElements = document.querySelectorAll('.hidden');
+hiddenElements.forEach((el) => {
+    observer.observe(el);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        const formData = new FormData(form);
+
+        fetch('sendmail.php', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.text())
+            .then(data => {
+                console.log('Success:', data);
+                // Handle success, e.g., show a success message
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+                // Handle error, e.g., show an error message
+            });
+    });
 });

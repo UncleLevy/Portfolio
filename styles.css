@@ -7,7 +7,7 @@ body {
     padding: 0;
     background: #151b2b;
 }
-@media (min-width: 768px) {
+@media (min-width:  768px){
     header {
         color: #beb4b4;
         height: 100vh;
@@ -107,7 +107,10 @@ body {
         max-width: 800px;
         margin: 50px auto;
         padding: 20px;
-        border-bottom: royalblue 1px solid;
+        border-top: royalblue 1px solid;
+        place-items: center;
+        align-items: center;
+        min-height: 50vh;
     }
 
     section h2{
@@ -226,7 +229,39 @@ body {
         color: #beb4b4;
         
     }
+    .hidden {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100%);
+        transition: all 1s;
+        
+    }
+
+    .show {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
 }
+
+
+
+@media (min-width:  1440px){
+    section {
+        width: 100%;
+        max-width: 800px;
+        margin: 10px auto;
+        padding: 20px;
+        border-top: royalblue 1px solid;
+        place-items: center;
+        align-items: center;
+        min-height: 15vh;
+    }
+}
+
+
+
+
 
 @media (max-width: 767px) {
     .chat-button {
@@ -299,6 +334,7 @@ body {
         padding: 50px 0px;
     }
     section{
+        border-top: royalblue 1px solid;
         width: 90%;
         max-width: 800px;
         margin: 50px auto;
@@ -315,13 +351,15 @@ body {
         margin-bottom: 20px;
     }
     footer{
+        border-top: royalblue 1px solid;
         background-color: #151b2b;
         color: #beb4b4;
         text-align: center;
         padding: 10px;
         position: relative;
         bottom: 0;
-        width: 90%;
+        margin: auto;
+        width: 95%;
     }
     a{
         color: #beb4b4;
@@ -352,6 +390,17 @@ body {
         cursor: pointer;
         box-shadow: #02164e 5px 2px 5px;
     }
-
+    .hidden {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100%);
+        transition: all 1s;
+    }
+    
+    .show {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0);
+    }
 }
 

@@ -9,15 +9,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         && !empty($_POST['projectTimeline'])
         && !empty($_POST['description'])
     ){
-        $firstName = $_POST["firstName"];
-        $lastName = $_POST["lastName"];
-        $email = $_POST["email"];
-        $phone = $_POST["phone"];
-        $budget = $_POST["budget"];
-        $projectTimeline = $_POST["projectTimeline"];
-        $description = $_POST["description"];
+        $firstName = filter_input(INPUT_POST, 'firstName', FILTER_SANITIZE_STRING);
+        $lastName = filter_input(INPUT_POST, 'lastName', FILTER_SANITIZE_STRING);
+        $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+        $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
+        $budget = filter_input(INPUT_POST, 'budget', FILTER_SANITIZE_STRING);
+        $projectTimeline = filter_input(INPUT_POST, 'projectTimeline', FILTER_SANITIZE_STRING);
+        $description = filter_input(INPUT_POST, 'description', FILTER_SANITIZE_STRING);
 
-        $to = "lllevybbwalya@outlook.com"; // Replace with your email address
+        $to = "lllevybbwalya@outlook.com"; 
         $subject = "New Contact Form Submission";
         $body = "First Name: {$firstName}\nLast Name: {$lastName}\nEmail: {$email}\nPhone: {$phone}\nBudget: {$budget}\nProject Timeline: {$projectTimeline}\nDescription: {$description}";
         $headers = "From: {$email}";
@@ -28,5 +28,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             echo "Failed to send message.";
         }
     }
-}
+}else{
+    echo "Failed to send message.";}
 ?>
