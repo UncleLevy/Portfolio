@@ -5,7 +5,7 @@ body {
     color: #707070;
     margin: 0;
     padding: 0;
-    background: #151b2b;
+    background: rgba(21,  27,  43,  0.95); /*#151b2b*/
 }
 
 .menu-toggle {
