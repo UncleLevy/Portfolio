@@ -536,11 +536,6 @@ body {
     }
     .col {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        /* Create two columns */
-        grid-template-rows: repeat(2, auto);
-        /* Create two rows */
-        grid-gap: 10px;
         /* Space between grid items */
         justify-items: flex;
         /* Center items horizontally */
