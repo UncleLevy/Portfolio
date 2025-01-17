@@ -5,19 +5,18 @@ body {
     color: #707070;
     margin: 0;
     padding: 0;
-    background: rgba(21,  27,  43,  0.95); /*#151b2b*/
+    background: rgba(21, 27, 43, 0.95);
 }
 
 .menu-toggle {
     display: none;
-    /* Hide the button on desktop */
     background-color: #151b2b;
     color: #beb4b4;
     border: none;
     cursor: pointer;
     padding: 10px;
     font-size: 1.2em;
-}*/
+}
 
 .nav-links {
     display: flex;
@@ -27,22 +26,18 @@ body {
     left: 0;
     background-color: inherit;
     width: 100%;
+    flex-direction: column; /* Stack items vertically on mobile */
 }
 
 .nav-links.show {
-    display: block;
+    display: flex;
 }
 
 .tc {
     color: rgb(255, 255, 255);
 }
 
-
-
-
-
-
-@media (min-width:  768px){
+@media (min-width: 768px) {
     header {
         color: #beb4b4;
         height: 100vh;
@@ -54,7 +49,7 @@ body {
         background-color: #151b2b75;
         max-width: 100%;
     }
-    header::before{
+    header::before {
         content: '';
         position: fixed;
         top: 0px;
@@ -68,7 +63,6 @@ body {
         filter: blur(10px);
     }
 
-
     nav ul {
         padding: 0;
         list-style: none;
@@ -78,7 +72,6 @@ body {
 
     nav ul li {
         margin: 0 15px;
-        
     }
 
     nav ul li a {
@@ -351,15 +344,18 @@ body {
     nav ul {
         padding: 0;
         list-style: none;
-        display: flex;
-        justify-content: center;
+        width: 100%;
     }
     nav ul li {
-        margin: 0 15px;
+        width: 100%;
+        text-align: center;
+        margin: 10px 0;
     }
     nav ul li a {
         color: #beb4b4;
         text-decoration: none;
+        display: block;
+        padding: 10px 0;
     }
     nav ul li a:hover {
         color: #fff;
@@ -369,6 +365,21 @@ body {
     }
     h1 {
         margin-bottom: 10px;
+    }
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-links.show {
+        display: flex;
     }
     .name {
         color: rgb(248, 255, 255);
@@ -381,7 +392,7 @@ body {
         border-radius: 180px;
         border: orange 1px solid;
         margin: auto;
-        object-fit:cover;
+        object-fit: cover;
     }
     .desc {
         margin: auto;
