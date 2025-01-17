@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 body {
     font-family: "Inter", Arial;
     line-height: 1.6;
@@ -19,14 +20,14 @@ body {
 }
 
 .nav-links {
-    display: flex;
+    display: none;
     position: absolute;
-    margin-top: 5px;
     top: 100%;
     left: 0;
     background-color: inherit;
     width: 100%;
-    flex-direction: column; /* Stack items vertically on mobile */
+    flex-direction: column;
+    padding: 0;
 }
 
 .nav-links.show {
@@ -37,335 +38,277 @@ body {
     color: rgb(255, 255, 255);
 }
 
-@media (min-width: 768px) {
-    header {
-        color: #beb4b4;
-        height: 100vh;
-        max-height: 450px;
-        text-align: center;
-        display: grid;
-        justify-content: center;
-        align-items: end;
-        background-color: #151b2b75;
-        max-width: 100%;
-    }
-    header::before {
-        content: '';
-        position: fixed;
-        top: 0px;
-        background-image: url("./images/profile.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        filter: blur(10px);
-    }
-
-    nav ul {
-        padding: 0;
-        list-style: none;
-        display: flex;
-        justify-content: center;
-    }
-
-    nav ul li {
-        margin: 0 15px;
-    }
-
-    nav ul li a {
-        color: #beb4b4;
-        text-decoration: none;
-    }
-
-    nav ul li a:hover {
-        color: royalblue;
-    }
-
-    section {
-        padding: 20px 0;
-    }
-
-    h1 {
-        margin-bottom: 10px;
-    }
-
-    .name {
-        color: rgb(248, 255, 255);
-        font-weight: 700;
-    }
-    .name-t {
-        color: rgb(248, 255, 255);
-        font-weight: 500;
-    }
-
-    .profile-image {
-        height: 225px ;
-        width: 225px;;
-        border-radius: 200px;
-        margin: auto;
-        object-fit:cover;
-        border: royalblue 1px solid;
-    } 
-
-
-    .desc {
-        margin: auto;
-        max-width: 55vw;
-        font-weight: bold;
-    }
-
-    .col {
-        display: grid;
-        grid-template-columns: repeat(2,  1fr); /* Create two columns */
-        grid-template-rows: repeat(2, auto); /* Create two rows */
-        grid-gap:  30px; /* Space between grid items */
-        justify-items: flex; /* Center items horizontally */
-        align-items: flex; /* Center items vertically */
-        margin:  20px  0;
-    }
-
-    main{
-        background-color: inherit;
-        position: relative;
-        z-index: 10;
-        padding: 30px 0px;
-    }
-    
-    section{
-        width: 100%;
-        max-width: 800px;
-        margin: 50px auto;
-        padding: 20px;
-        border-top: royalblue 1px solid;
-        place-items: center;
-        align-items: center;
-        min-height: 50vh;
-    }
-    
-    section h2{
-        color: royalblue;
-        text-transform: uppercase;
-    }
-    
-    section b{
-        color: white;
-    }
-    
-    section li{
-        margin-bottom: 20px;
-    }
-    footer{
-        background-color: #151b2b;
-        color: #beb4b4;
-        text-align: center;
-        padding: 10px;
-        position: relative;
-        bottom: 0;
-        width: 100%;
-        border-top: royalblue 1px solid;
-    }
-    
-    a{
-        color: #beb4b4;
-        text-decoration: none;
-    }
-    
-    .bar{
-        width: 200px;
-        height: 8px;
-        border-radius: 5px;
-        display: block;
-        background-color: #1c2541;
-    }
-    
-    .bar div{
-        height: 100%;
-        border-radius: 5px;
-        background-color: rgb(85, 125, 245);
-    }
-    
-    .chat-button {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        padding: 10px 20px;
-        background-color: royalblue;
-        color: white;
-        border: none;
-        border-radius: 100px 100px 10px 100px;
-        font-size: 1.6em;
-        cursor: pointer;
-        box-shadow: #02164e 15px 2px 5px;
-    }
-    
-    .chat-button:hover {
-        background-color: #02164e;
-        box-shadow: royalblue 15px 2px 5px;
-    }
-    form {
-        display: flex;
-        flex-direction: column;
-        max-width: 400px;
-        margin: 0 auto;
-        margin-bottom: 15px;
-        padding: 20px;
-        background-color: inherit;
-        border-radius: 1px;
-    }
-    
-    label {
-        margin-bottom: 5px;
-    }
-    
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    textarea,
-    select {
-        padding: 10px;
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-    }
-    
-    input[type="submit"] {
-        padding: 10px 20px;
-        background-color: #4CAF50;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-    
-    fieldset {
-        border: 1px solid #ccc;
-        padding: 10px;
-        border-radius: 3px;
-    }
-    
-    legend {
-        padding: 0 5px;
-    }
-    .file {
-        padding: 10px;
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-    }
-    time {
-        color: #beb4b4;
-        
-    }
-    .hidden {
-        opacity: 0;
-        filter: blur(5px);
-        transform: translateX(-100%);
-        transition: all 1s;
-        
-    }
-    
-    .show {
-        opacity: 1;
-        filter: blur(0);
-        transform: translateX(0);
-    }
+header {
+    color: #beb4b4;
+    height: 100vh;
+    max-height: 450px;
+    text-align: center;
+    display: grid;
+    justify-content: center;
+    align-items: end;
+    background-color: #151b2b75;
 }
 
+header::before {
+    content: '';
+    position: fixed;
+    top: 0px;
+    background-image: url("./images/profile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    filter: blur(10px);
+}
 
+nav ul {
+    padding: 0;
+    list-style: none;
+}
 
+nav ul li {
+    margin: 0 15px;
+}
 
+nav ul li a {
+    color: #beb4b4;
+    text-decoration: none;
+}
 
-@media (min-width:  1440px){
+nav ul li a:hover {
+    color: royalblue;
+}
+
+section {
+    padding: 20px 0;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.name {
+    color: rgb(248, 255, 255);
+    font-weight: 700;
+}
+
+.name-t {
+    color: rgb(248, 255, 255);
+    font-weight: 500;
+}
+
+.profile-image {
+    height: 225px;
+    width: 225px;
+    border-radius: 200px;
+    margin: auto;
+    object-fit: cover;
+    border: royalblue 1px solid;
+}
+
+.desc {
+    margin: auto;
+    max-width: 55vw;
+    font-weight: bold;
+}
+
+.col {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 30px;
+    justify-items: flex;
+    align-items: flex;
+    margin: 20px 0;
+}
+
+main {
+    background-color: inherit;
+    position: relative;
+    z-index: 10;
+    padding: 30px 0px;
+}
+
+section {
+    width: 100%;
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border-top: royalblue 1px solid;
+    place-items: center;
+    align-items: center;
+    min-height: 50vh;
+}
+
+section h2 {
+    color: royalblue;
+    text-transform: uppercase;
+}
+
+section b {
+    color: white;
+}
+
+section li {
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #151b2b;
+    color: #beb4b4;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    border-top: royalblue 1px solid;
+}
+
+a {
+    color: #beb4b4;
+    text-decoration: none;
+}
+
+.bar {
+    width: 200px;
+    height: 8px;
+    border-radius: 5px;
+    display: block;
+    background-color: #1c2541;
+}
+
+.bar div {
+    height: 100%;
+    border-radius: 5px;
+    background-color: rgb(85, 125, 245);
+}
+
+.chat-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: royalblue;
+    color: white;
+    border: none;
+    border-radius: 100px 100px 10px 100px;
+    font-size: 1.6em;
+    cursor: pointer;
+    box-shadow: #02164e 15px 2px 5px;
+}
+
+.chat-button:hover {
+    background-color: #02164e;
+    box-shadow: royalblue 15px 2px 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+    padding: 20px;
+    background-color: inherit;
+    border-radius: 1px;
+}
+
+label {
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 3px;
+}
+
+legend {
+    padding: 0 5px;
+}
+
+.file {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+time {
+    color: #beb4b4;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    transition: all 1s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+}
+
+@media (min-width: 1440px) {
     section {
-        width: 100%;
-        max-width: 800px;
-        margin: 10px auto;
-        padding: 20px;
-        border-top: royalblue 1px solid;
-        place-items: center;
-        align-items: center;
         min-height: 15vh;
     }
 }
 
-
-
-
-
-
-
-
-@media (prefers-reduced-motion){
-    .hidden {
-        opacity: 0;
-        filter: blur(5px);
-        transform: translateX(-100%);
-        transition: none;
-    }
-    
-    .show {
-        opacity: 1;
-        filter: blur(0);
-        transform: translateX(0);
+@media (prefers-reduced-motion) {
+    .hidden, .show {
         transition: none;
     }
 }
 
-
-
-
 @media (max-width: 767px) {
-    
     header {
         color: #fff;
-        height: 100vh;
         max-height: 400px;
-        text-align: center;
-        display: grid;
-        justify-content: center;
         align-items: flex-end;
-        background-color: #151b2b75;
     }
-    header::before{
-        content: '';
-        position: fixed;
-        top: 0px;
-        background-image: url("./images/profile.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
-        filter: blur(10px);
-    }
+
     nav ul {
-        padding: 0;
-        list-style: none;
         width: 100%;
     }
+
     nav ul li {
         width: 100%;
         text-align: center;
         margin: 10px 0;
     }
+
     nav ul li a {
-        color: #beb4b4;
-        text-decoration: none;
         display: block;
         padding: 10px 0;
     }
-    nav ul li a:hover {
-        color: #fff;
-    }
-    section {
-        padding: 20px 0;
-    }
-    h1 {
-        margin-bottom: 10px;
-    }
+
     .menu-toggle {
         display: block;
         position: absolute;
@@ -373,189 +316,45 @@ body {
         right: 10px;
     }
 
-    .nav-links {
-        display: none;
-        flex-direction: column;
+    .nav-links.show {
+        display: block;
     }
 
-    .nav-links.show {
-        display: flex;
-    }
-    .name {
-        color: rgb(248, 255, 255);
-        text-transform: uppercase;
-        font-weight: 700;
-    }
     .profile-image {
-        height: 180px ;
-        width: 180px;;
+        height: 180px;
+        width: 180px;
         border-radius: 180px;
         border: orange 1px solid;
-        margin: auto;
-        object-fit: cover;
     }
+
     .desc {
-        margin: auto;
-        max-width: 55vw;
-        font-weight: bold;
+        max-width: 90vw;
     }
-    main{
-        background-color: inherit;
-        position: relative;
-        z-index: 10;
+
+    main {
         padding: 50px 0px;
     }
-    section{
-        border-top: royalblue 1px solid;
+
+    section {
         width: 90%;
-        max-width: 800px;
-        margin: 50px auto;
-        padding: 20px;
     }
-    section h2{
-        color: royalblue;
-        text-transform: uppercase;
-    }
-    section b{
-        color: white;
-    }
-    section li{
-        margin-bottom: 20px;
-    }
-    footer{
-        border-top: royalblue 1px solid;
-        background-color: #151b2b;
-        color: #beb4b4;
-        text-align: center;
-        padding: 10px;
-        position: relative;
-        bottom: 0;
-        margin: auto;
-        width: 95%;
-        border-top: royalblue 1px solid;
-    }
-    a{
-        color: #beb4b4;
-        text-decoration: none;
-    }
-    .bar{
-        width: 200px;
+
+    .bar {
         height: 5px;
-        border-radius: 5px;
-        display: block;
-        background-color: #1c2541;
     }
-    .bar div{
-        height: 100%;
-        border-radius: 5px;
-        background-color: rgb(85, 125, 245);
-    }
+
     .chat-button {
-        position: fixed;
-        
-        bottom: 20px;
-        right: 20px;
         padding: 5px 10px;
-        background-color: royalblue;
-        color: white;
-        border: none;
-        border-radius: 10px 10px 10px 10px;
-        font-size: 1.5em;
-        cursor: pointer;
+        border-radius: 10px;
         box-shadow: #02164e 5px 2px 5px;
-    }
-    .chat-button:hover {
-        background-color: #02164e;
-        box-shadow: royalblue 15px 2px 5px;
-    }
-    .hidden {
-        opacity: 0;
-        filter: blur(5px);
-        transform: translateX(-100%);
-        transition: all 1s;
-    }
-    
-    .show {
-        opacity: 1;
-        filter: blur(0);
-        transform: translateX(0);
     }
 
     form {
-        align-items: center;
-        justify-content: center;
         max-width: 90%;
-        margin: auto;
-        /* Make the form take the full width on mobile */
-        padding: 20px;
-        /* Add some padding for mobile */
-        box-sizing: border-box;
-        /* Include padding and border in the element's total width and height */
     }
-    
-    form label {
-        display: block;
-        /* Stack labels on top of inputs on mobile */
-        margin-bottom: 5px;
-        /* Add some space between labels and inputs */
-    }
-    
-    form input[type="text"],
-    form input[type="email"],
-    form input[type="tel"],
-    form textarea,
-    form select {
-        width: 100%;
-        /* Make inputs take the full width of the form on mobile */
-        box-sizing: border-box;
-        /* Include padding and border in the element's total width and height */
-    }
-    
-    form fieldset {
-        border: none;
-        /* Remove the border on mobile */
-    }
-    
-    form fieldset legend {
-        display: block;
-        /* Stack the legend on top of the radio buttons on mobile */
-        margin-bottom: 5px;
-        /* Add some space between the legend and the radio buttons */
-    }
-    
-    form fieldset input[type="radio"] {
-        display: block;
-        /* Stack radio buttons on top of each other on mobile */
-        margin-bottom: 5px;
-        /* Add some space between radio buttons */
-    }
-    
-    form fieldset label {
-        display: block;
-        /* Stack labels on top of radio buttons on mobile */
-        margin-bottom: 5px;
-        /* Add some space between labels and radio buttons */
-    }
-    
-    form input[type="submit"] {
-        width: 100%;
-        /* Make the submit button take the full width of the form on mobile */
-        margin-top: 10px;
-        /* Add some space above the submit button */
-    }
-    
-    .menu-toggle {
-        display: block;
-        /* Show the button on mobile */
-    }
+
     .col {
-        display: grid;
-        /* Space between grid items */
-        justify-items: flex;
-        /* Center items horizontally */
-        align-items: flex;
-        /* Center items vertically */
+        grid-template-columns: 1fr;
         margin: 10px 0;
     }
 }
-
