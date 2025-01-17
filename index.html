@@ -12,22 +12,20 @@
 </head>
 <body>
     <header>
-        <div>
-            <nav class="nav-links">
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="#contact">Contacts</a></li>
-                </ul>
-            </nav>
-            <p class="tc">Personal Portfolio</p>
-            <img class="profile-image" src="images/profile.jpg" alt="Profile Image">
-            <h1 class="name">Hi, I'm Levy Mulenga</h1>
-            
-        </div>
+        <button class="menu-toggle">☰</button>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contacts</a></li>
+            </ul>
+        </nav>
+        <p class="tc">Personal Portfolio</p>
+        <img class="profile-image" src="images/profile.jpg" alt="Profile Image">
+        <h1 class="name">Hi, I'm Levy Mulenga</h1>
     </header>
     <main>
         <section id="about" class="hidden">
@@ -194,5 +192,10 @@
         <footer>
             <p><a href="https://github.com/UncleLevy">©  2025 Designed and Built by Levy Bwalya Mulenga. All rights reserved.</a></p>
         </footer>
+        <script>
+            document.querySelector('.menu-toggle').addEventListener('click', function() {
+                document.querySelector('.nav-links').classList.toggle('show');
+            });
+        </script>
     </body>
 </html>
